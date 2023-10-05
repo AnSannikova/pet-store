@@ -1,0 +1,7 @@
+mixin card(link, imageSrc, imageAlt, title, text)
+	article.card
+		a.card__link(href= link)  
+			.card__content
+				img.card__image(src= imageSrc, alt=imageAlt)
+				h3.card__title= title
+				p.card__text= text

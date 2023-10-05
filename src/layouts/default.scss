@@ -1,0 +1,11 @@
+@import '../globals/variables';
+@import '../globals/globals';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../typography/typography';
+
+.default-layout {
+	font-family: 'Poppins', sans-serif;
+	color: $main-text-color;
+	min-inline-size: 360px;
+}

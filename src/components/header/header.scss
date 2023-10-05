@@ -1,0 +1,40 @@
+@import '../../globals/variables';
+@import '../../globals/globals';
+@import '../logo/logo';
+@import '../buttons/button';
+@import '../buttons/_accent-color/button_accent-color';
+
+.header {
+  padding: 23px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.78;
+    margin-inline-end: 30px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (width <= 768px) {
+
+  .header {
+    padding: 22.5px 20px;
+
+    &__link {
+      display: none;
+    }
+  }
+  
+}
+
+@media (width <= 425px) {
+  .header__button-section button {
+    padding: 11px 26px;
+  }
+}

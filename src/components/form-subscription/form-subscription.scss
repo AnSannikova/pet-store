@@ -1,0 +1,58 @@
+.form {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 12px 20px;
+	font-size: 18px;
+	line-height: 1.78;
+
+	&__label {
+		grid-column: span 2;
+	}
+
+	&__input {
+		appearance: none;
+		border-radius: $border-radius;
+		border: 1px solid $input-border-color;
+		padding: 11px 20px;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: $main-text-color;
+
+		&::placeholder {
+			color: $main-text-color;
+		}
+	}
+
+	&__button {
+		padding: 11px 31.5px;
+		border: none;
+		border-radius: $border-radius;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		background-color: $accent-button-color;
+		color: $light-color;
+		cursor: pointer;
+		transition: opacity easy 0.3s;
+		
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+@media (width <= 425px) {
+
+	.form {
+		
+		&__input {
+			grid-column: span 2;
+		}
+
+		&__button {
+			grid-column: span 2;
+		}
+	
+	}
+}

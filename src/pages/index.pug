@@ -1,0 +1,59 @@
+extends ../layouts/default
+
+block variables
+  - var title = "Pet Store - Homepage";
+  - var pageStylesheet = "/index.css";
+  - 
+    var cardsData = [
+      {'link': '#', 'imageSrc': './svg/bone.svg', 'imageAlt': 'Black bone.', 'title': 'Best quality pet food', 'text': 'Super delicious food. Available in a range of delicious flavors.'},
+      {'link': '#', 'imageSrc': './svg/balls.svg', 'imageAlt': 'Two balls.', 'title': 'Toys & Accessories', 'text': 'Soft toys, chew toys, and rope toys. Strong, interactive, and fun.'},
+      {'link': '#', 'imageSrc': './svg/medical.svg', 'imageAlt': 'Medical cross.', 'title': 'Pets medical care', 'text': 'You can get a wide range of great treatments for your dog.'},
+      {'link': '#', 'imageSrc': './svg/scissors.svg', 'imageAlt': 'Grooming scissors.', 'title': 'Full service grooming', 'text': 'It is the right time to groom your dog with a variety of treatments.'}
+    ]
+
+block page-content
+
+  section.about
+    .about__content.conteiner
+      .about__text-section.text-section
+        h1.text-section__title.main-title Pet Store &amp; Beyond
+        p.text-section__text.text Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun.
+        include ../components/buttons/_main-color/button_main-color.pug
+        +button('Get Started')
+      .about__image-section 
+        picture 
+          source(srcset="./images/two-dogs.avif", type="image/avif")
+          source(srcset="./images/two-dogs.webp", type="image/webp")
+          img.about__image(src="./images/two-dogs.png", alt="Two dogs in multi-colored overalls.")
+  
+  section.video-section
+    include ../components/video-block/video-block.pug
+    +video-block('./video/dog-on-the-grass.webm', './video/dog-on-the-grass.mp4')
+  
+  section.partners
+    img.partners__image(src="./svg/nestle.svg", alt="Logotype Nestle")
+    img.partners__image(src="./svg/apple.svg", alt="Logotype Apple")
+    img.partners__image(src="./svg/beco.svg", alt="Logotype Beco")
+    img.partners__image(src="./svg/amazon.svg", alt="Logotype Amazon")
+    img.partners__image(src="./svg/google.svg", alt="Logotype Google")
+    img.partners__image(src="./svg/walmart.svg", alt="Logotype Walmart")
+  
+  section.cards
+    .cards__content 
+      include ../components/card/card.pug
+      if cardsData.length > 0
+        each card in cardsData
+          +card(card.link, card.imageSrc, card.imageAlt, card.title, card.text)
+  
+  section.contacts
+    .contacts__content.conteiner
+      .contacts__text-section.text-section
+        h2.text-section__title.main-title Let&rsquo;s talk, woof! 
+        p.text-section__text.text You can ask us questions about your pet, and we will be happy to answer you!
+        include ../components/buttons/_main-color/button_main-color.pug
+        +button('Contact us')
+      .contacts__image-section 
+        picture 
+          source(srcset="./images/dog.avif", type="image/avif")
+          source(srcset="./images/dog.webp", type="image/webp")
+          img.contacts__image(src="./images/dog.png", alt="French bulldog puppy on a yellow background.")

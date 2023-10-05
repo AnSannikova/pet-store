@@ -1,0 +1,20 @@
+.logo {
+  
+  &__section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__image {
+    display: block;
+    inline-size: 35px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}

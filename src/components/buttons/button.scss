@@ -1,0 +1,15 @@
+.button {
+  border-style: none;
+  padding: 11px 50px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.78;
+  cursor: pointer;
+  transition: opacity ease 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+

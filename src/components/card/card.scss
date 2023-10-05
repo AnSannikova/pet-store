@@ -1,0 +1,31 @@
+.card {
+	text-align: center;
+	max-inline-size: 230px;
+	border-radius: $border-radius;
+
+	&__content {
+		font-size: 18px;
+		line-height: 1.78;
+	}
+
+	&__image {
+		inline-size: 85px;
+		block-size: 85px;
+		margin-block-end: 40px;
+	}
+
+	&__title {
+		font-weight: 600;
+	}
+
+	&__text {
+		font-weight: 400;
+		opacity: 0.5;
+	}
+}
+
+.card:hover .card__title {
+	text-decoration: underline $hover-link-color;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 2px;
+}

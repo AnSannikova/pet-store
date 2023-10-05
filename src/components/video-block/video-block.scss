@@ -1,0 +1,27 @@
+.video-block {
+  padding: 70px 0;
+  display: grid;
+  justify-content: center;
+}
+
+.video-box {
+  max-inline-size: 765px;
+  aspect-ratio: 1.7 / 1;
+}
+
+.video {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: $border-radius;
+}
+
+@media (width <= 856px) {
+
+  .video-block {
+    padding: 54px 20px;
+  }
+  
+  
+}
