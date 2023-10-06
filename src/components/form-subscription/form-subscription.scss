@@ -34,7 +34,7 @@
 		background-color: $accent-button-color;
 		color: $light-color;
 		cursor: pointer;
-		transition: opacity easy 0.3s;
+		transition: opacity ease 0.3s;
 		
 		&:hover {
 			opacity: 0.8;

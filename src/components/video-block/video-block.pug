@@ -1,6 +1,6 @@
 mixin video-block(videoWebm, videoMp4)
   .video-block.conteiner
     .video-box
-      video.video(mute autoplay loop)
+      video.video(autoplay muted loop)
         source(src=videoWebm, type="video/webm")
         source(src=videoMp4, type="video/mp4")

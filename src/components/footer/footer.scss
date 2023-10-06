@@ -40,11 +40,11 @@
 		&-link {
 			font-size: 18px;
 			line-height: 1.33;
+			border-bottom: 1px solid transparent;
+			transition: border-bottom-color ease-in-out 0.3s;
 
 			&:hover {
-				text-decoration: underline $hover-link-color;
-				text-underline-offset: 4px;
-				text-decoration-thickness: 2px;
+				border-bottom-color: currentColor;
 			}
 		}
 	}
@@ -59,6 +59,11 @@
 		&-image {
 			display: block;
 			inline-size: 30px;
+			transition: translate ease-in-out 0.2s;
+
+			&:hover {
+				translate: 0 -3px;
+			}
 		}
 	}
 	
@@ -79,6 +84,14 @@
 
 	&__text {
 		text-transform: uppercase;
+	}
+
+	&__link {
+		transition: opacity ease 0.3s;
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
 
